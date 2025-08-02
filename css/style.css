@@ -1,0 +1,482 @@
+/* Import Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #8B4513; /* Coklat Khas Batik */
+    --secondary-color: #f4a261;
+    --dark-color: #333;
+    --light-color: #f4f4f4;
+    --white-color: #fff;
+}
+
+/* Global & Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    padding: 60px 0;
+}
+
+/* Header & Navigation */
+header {
+    background: var(--white-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.logo img {
+    height: 50px; /* Sesuaikan ukuran logo */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: var(--dark-color);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--primary-color);
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+#hero {
+    position: relative; /* Penting untuk memposisikan elemen di dalamnya */
+    height: 85vh;
+    color: var(--white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; /* Mencegah video keluar dari section */
+}
+
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Mendorong video ke lapisan paling belakang */
+    filter: blur(2px); /* OPSI: Tambahkan blur tipis pada video */
+}
+
+/* Lapisan Gelap di atas Video agar Teks Terbaca */
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative; /* Pastikan konten berada di atas lapisan gelap */
+    z-index: 1;
+}
+
+#hero h1 {
+    font-size: 3rem;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #6a350f;
+}
+
+.btn-outline {
+    display: inline-block;
+    background: none;
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+
+/* Intro Section */
+#intro {
+    text-align: center;
+}
+
+#intro h2 {
+    font-size: 2rem;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--white-color);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: 1.4rem;
+}
+
+.card p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.card .btn-outline {
+    margin: 1rem 0 1.5rem;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25D366;
+    color: var(--white-color);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive (Mobile-First Approach) */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%; /* Mulai dari luar layar */
+        width: 70%;
+        height: 100vh;
+        background: var(--dark-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        transition: left 0.5s ease-in-out;
+    }
+
+    .nav-links.nav-active {
+        left: 0; /* Pindahkan ke dalam layar */
+    }
+
+    .nav-links a {
+        color: var(--white-color);
+        font-size: 1.2rem;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 101; /* Pastikan di atas menu */
+    }
+    
+    .hamburger.toggle .fa-bars {
+        display: none;
+    }
+
+    .hamburger.toggle .fa-times {
+        display: block !important;
+    }
+    
+    .fa-times {
+        display: none;
+    }
+
+    #hero h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* === Tambahan untuk Halaman Tentang & Kontak === */
+
+/* Halaman Tentang Kami */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.about-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-image img {
+    border-radius: 8px;
+}
+
+.about-text {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.process-step i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Halaman Kontak */
+.contact-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.contact-info, .order-steps {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.map-container {
+    position: relative;
+    padding-bottom: 75%; /* Rasio 4:3 */
+    height: 0;
+    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.order-steps ol {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.order-steps li {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* === Tambahan untuk Halaman Detail Produk === */
+
+.product-detail-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.product-detail-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-detail-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.product-detail-info {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.product-detail-info h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-detail-info .price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.product-detail-info h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid var(--light-color);
+    padding-bottom: 0.5rem;
+}
+
+.product-detail-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.product-detail-info ul li {
+    margin-bottom: 0.5rem;
+}
+
+.btn-whatsapp {
+    margin-top: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Penyesuaian untuk mobile */
+@media (max-width: 768px) {
+    .product-detail-info h1 {
+        font-size: 2rem;
+    }
+    .product-detail-info .price {
+        font-size: 1.5rem;
+    }
+}
