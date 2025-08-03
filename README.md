@@ -1,4 +1,4 @@
-# Website Portofolio Batik Tulis Sukowijoyo  Batik
+# Website Batik Tulis Sukowijoyo
 
 Website portofolio statis yang dirancang untuk UMKM pengrajin batik tulis "Batik Sukowijoyo". Proyek ini bertujuan untuk menampilkan keindahan dan keaslian produk batik tulis kepada audiens yang lebih luas secara digital. Dibuat dengan HTML, CSS, dan JavaScript murni untuk memastikan website yang ringan, cepat, dan mudah dikelola.
 
