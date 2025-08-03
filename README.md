@@ -1,6 +1,6 @@
 # Website Portofolio Batik Tulis Sukowijoyo  Batik
 
-![Batik Sukowijoyo Banner](https://i.imgur.com/your-banner-image.jpg) Website portofolio statis yang dirancang untuk UMKM pengrajin batik tulis "Batik Sukowijoyo". Proyek ini bertujuan untuk menampilkan keindahan dan keaslian produk batik tulis kepada audiens yang lebih luas secara digital. Dibuat dengan HTML, CSS, dan JavaScript murni untuk memastikan website yang ringan, cepat, dan mudah dikelola.
+Website portofolio statis yang dirancang untuk UMKM pengrajin batik tulis "Batik Sukowijoyo". Proyek ini bertujuan untuk menampilkan keindahan dan keaslian produk batik tulis kepada audiens yang lebih luas secara digital. Dibuat dengan HTML, CSS, dan JavaScript murni untuk memastikan website yang ringan, cepat, dan mudah dikelola.
 
 ---
 
