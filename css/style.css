@@ -1,16 +1,13 @@
-/* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* CSS Variables */
 :root {
-    --primary-color: #8B4513; /* Coklat Khas Batik */
+    --primary-color: #8B4513;
     --secondary-color: #f4a261;
     --dark-color: #333;
     --light-color: #f4f4f4;
     --white-color: #fff;
 }
 
-/* Global & Reset Styles */
 * {
     margin: 0;
     padding: 0;
@@ -322,8 +319,6 @@ footer {
     }
 }
 
-/* === Tambahan untuk Halaman Tentang & Kontak === */
-
 /* Halaman Tentang Kami */
 .about-content {
     display: flex;
@@ -410,8 +405,6 @@ footer {
     margin-bottom: 1rem;
     line-height: 1.7;
 }
-
-/* === Tambahan untuk Halaman Detail Produk === */
 
 .product-detail-layout {
     display: flex;
